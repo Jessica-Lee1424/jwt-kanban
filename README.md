@@ -30,11 +30,11 @@ A password for the database.
 
 A secret key for the JWT (this can be any random string).
 
-Complete the authenticateToken method in server/src/middleware/auth.ts.
+Complete the authenticateToken method in server/src/middleware/auth.ts. x
 
-Complete the login method in server/src/routes/auth-routes.ts.
-
-Add authentication to the API routes in server/src/routes/index.ts.
+Complete the login method in server/src/routes/auth-routes.ts.  x
+ 
+Add authentication to the API routes in server/src/routes/index.ts.  x
 
 Complete the login method in client/src/api/authAPI.tsx.
 

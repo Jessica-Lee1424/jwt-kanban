@@ -6,7 +6,6 @@ interface JwtPayload {
 }
 
 export const authenticateToken = (req: Request, res: Response, next: NextFunction) => {
-  // TODO: Verify the token exists and add the user data to the request object
   const authHeader = req.headers['authorization']; // Get the Authorization header
 
   if (authHeader) {
@@ -20,6 +19,7 @@ export const authenticateToken = (req: Request, res: Response, next: NextFunctio
       req.user = user as JwtPayload; // Add user data to the request object
       return next(); // Proceed to the next middleware or route handler
     });
+    return next ()
   } else {
     return res.sendStatus(401); // Unauthorized if no token is provided
   }
