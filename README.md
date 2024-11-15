@@ -1,44 +1,37 @@
-# jwt-kanban
-Creates a Kanban board with a secure login page to ensure secure access and manage work tasks 
+## Table of Contents
+- [License](#license)
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributions](#contributions)
+- [Testing](#testing)
+- [GitHub](#github)
+- [Email Author](#email-author)
+- [Video Demo](#video-demo)
 
-Acceptance Criteria:
+## License
+![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-GIVEN a Kanban board with a secure login page
-WHEN I load the login page
-THEN I am presented with form inputs for username and password
-WHEN I enter my valid username and password
-THEN I am authenticated using JSON Web Tokens (JWT) and redirected to the main Kanban board page
-WHEN I enter an invalid username or password
-THEN I am presented with an error message indicating that the credentials are incorrect
-WHEN I successfully log in
-THEN a JWT is stored securely in the client's local storage for subsequent authenticated requests
-WHEN I log out
-THEN the JWT is removed from the client's local storage and I am redirected to the login page
-WHEN I try to access the Kanban board page without being authenticated
-THEN I am redirected to the login page
-WHEN I remain inactive for a defined period
-THEN my session expires, the JWT is invalidated, and I am redirected to the login page upon my next action
+## Description
+This website authenticates Kanban users, checking secure tokens against verified users. If authenticated, the user will be allowed access to the project task board and can add, edit or delete projects as appropriate.
 
+## Installation
+React, Node, Vite
 
-You will need to:
+## Usage
+For fun
 
-Create a .env file for the server that includes:
+## Contributions
+Benecio Lopez, tutor
 
-A username for the database.
+## Testing
+Tested with Insomnia.  In the default Insomnia code included in the homework instructions, apparently the key is old so in order to get the app working, you have to generate a new one once logged in and delete the given Bearer Token with the new one you generated.
 
-A password for the database.
+## GitHub
+[GitHub](https://github.com/Jessica-Lee1424)
 
-A secret key for the JWT (this can be any random string).
+## Email Author
+[Email Author](mailto:jgonnella@test.mail)
 
-Complete the authenticateToken method in server/src/middleware/auth.ts. x
-
-Complete the login method in server/src/routes/auth-routes.ts.  x
- 
-Add authentication to the API routes in server/src/routes/index.ts.  x
-
-Complete the login method in client/src/api/authAPI.tsx.
-
-Complete the methods of the AuthService in client/src/utils/auth.ts.
-
-You can refer to the Deploy with Render and PostgreSQL guide and the Render documentation on setting environment variables as needed.
-
+## Video Demo 
+[![My Image](https://drive.google.com/uc?id=1g0YLHB0qaixWZMZgqQg8gIO4F_uuyttR)](https://drive.google.com/file/d/1g0YLHB0qaixWZMZgqQg8gIO4F_uuyttR/view)
