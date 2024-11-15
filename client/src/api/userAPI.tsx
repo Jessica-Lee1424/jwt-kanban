@@ -2,28 +2,22 @@ import Auth from '../utils/auth';
 
 const retrieveUsers = async () => {
   try {
-    const token = Auth.getToken();
-    if (!token) {
-      throw new Error('No authentication token found');
-    }
-
     const response = await fetch('/api/users', {
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`
+        Authorization: `Bearer ${Auth.getToken()}`
       }
     });
+    const data = await response.json();
 
-    // Check if the response is okay before parsing
-    if (!response.ok) {
-      throw new Error(`Invalid user API response: ${response.statusText}`);
+    if(!response.ok) {
+      throw new Error('invalid user API response, check network tab!');
     }
 
-    const data = await response.json();
     return data;
 
   } catch (err) { 
-    console.log('Error from data retrieval:', err.message); // Log only the error message
+    console.log('Error from data retrieval:', err);
     return [];
   }
 }
